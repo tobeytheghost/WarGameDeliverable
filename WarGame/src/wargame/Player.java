@@ -15,12 +15,12 @@ import java.util.ArrayList;
  * A class that models each Player in the game. Players have an identifier, which should be unique.
  *
  * @author dancye
- * @author Paul Bonenfant Jan 2020
+ * @author Yassine Assim August 17th 2023
  */
 public class Player {
 
     private final String name; //the unique name for this player
-    private final GroupOfCards deck; 
+    private final GroupOfCards deck;  //the deck of cards held by player
 
     /**
      * A constructor that allows you to set the player's unique ID
@@ -29,7 +29,7 @@ public class Player {
      */
     public Player(String name) {
         this.name = name; 
-        deck = new GroupOfCards(); 
+        deck = new GroupOfCards();  //Initialize the player's deck
     }
 
     /**
@@ -42,6 +42,11 @@ public class Player {
     public GroupOfCards getDeck() {
         return deck; 
     }
+    
+    /**
+     * Draws a card from source deck and adds it to the player's deck.
+     * @param source the source deck from which to draw the card
+     */
 
     public void drawCard(GroupOfCards source) {
         // Check if the source deck is empty
@@ -54,8 +59,13 @@ public class Player {
         playerDeck.add(source.getCards().remove(0)); 
     }
     
+    /**
+     * Plays a card from the player's deck
+     * 
+     * @return 
+     */
     public Card playCard() {
-        return deck.getCards().remove(0); 
+        return deck.getCards().remove(0); //Remove and return the top card from player's deck
     }
 
 }
