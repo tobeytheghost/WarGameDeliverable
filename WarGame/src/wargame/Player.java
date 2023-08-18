@@ -4,11 +4,6 @@
  */
 package wargame;
 
-/**
- * TESTING COMMENTS AND BRANCH WORK
- * HELP ME
- * @author falzo
- */
 
 import java.util.ArrayList;
 
@@ -22,8 +17,7 @@ public class Player {
 
     private final String name; //the unique name for this player
     private final GroupOfCards deck; 
-    private final String lastName; //testing 
-    private final String firstName; //testing
+
 
     /**
      * A constructor that allows you to set the player's unique ID
