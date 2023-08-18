@@ -4,10 +4,6 @@
  */
 package wargame;
 
-/**
- *
- * @author falzo
- */
 
 import java.util.ArrayList;
 
@@ -21,6 +17,7 @@ public class Player {
 
     private final String name; //the unique name for this player
     private final GroupOfCards deck;  //the deck of cards held by player
+
 
     /**
      * A constructor that allows you to set the player's unique ID
